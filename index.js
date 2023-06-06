@@ -124,17 +124,64 @@ filterArrays([-2, 0, 9, 99, 1, -7, -6, -1, 10]);
 
 // 7. Write a program that prints the numbers from 1 to 100. But for multiples of 3 prints "Fizz" instead of the number and for the multiples of 5 prints "Buzz". For numbers which are multiples of both 3 and 5 prints "FizzBuzz"
 
-for (let num = 1; num <= 100; num++) {
+
+function fizzBuzz(){
+  for (let num = 1; num <= 100; num++) {
   
-  if (num % 3 === 0 && num % 5 == 0){
-    console.log('FizzBuzz');
-  }else if (num % 5 === 0) {
-    console.log('Buzz')
-  }else if (num % 3 === 0 ) {
-    console.log('Fizz')
-  
-  } else {
-    console.log (num);
+    if (num % 3 === 0 && num % 5 == 0){
+      console.log('FizzBuzz');
+    }else if (num % 5 === 0) {
+      console.log('Buzz')
+    }else if (num % 3 === 0 ) {
+      console.log('Fizz')
+    
+    } else {
+      console.log (num);
+    }
+   
   }
- 
 }
+
+fizzBuzz();
+
+
+
+
+
+
+// 8  The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria; 
+// It must start with a hash symbol, #.
+// Ignore all spaces in the input.
+// All words must have their first letter capitalized.
+// If the final result is going to be longer than 140 characters, it should return false.
+// If the input or result is an empty string, it should return false.
+
+
+function hashTagGenerator(hashIn){ 
+  if(hashIn===''){ 
+      console.log(false) 
+  }else{ 
+      array = hashIn.split(" ") 
+      array2 = ['#'] 
+      for(let i=0; i<array.length; i++){ 
+          word = toTitleCase(array[i]) 
+          array2.push(word) 
+      } 
+      new_string=array2.join("") 
+      if(new_string.length>140){  // check how to get length of string 
+          console.log(false) 
+      }else{ 
+          console.log(new_string) 
+      } 
+  } 
+} 
+
+
+function toTitleCase(str) { 
+  return str.toLowerCase().replace(/(?:^|\s)\w/g, function(match) { 
+    return match.toUpperCase(); 
+  }); 
+} 
+
+ hashTagGenerator('hundred days of code'); 
+  hashTagGenerator('popular hash tAgs On twitteR');
