@@ -3,7 +3,7 @@
 function fahrenheitToCelsius (fahrenheit) {
 
   let celsius = 5/9 * (fahrenheit - 32);
-  const theAnswer = (console.log (celsius));
+  console.log (celsius);
 }
 
 fahrenheitToCelsius(95);
@@ -22,7 +22,7 @@ function averageOfNumbers (mean) {
   });
   const averageOfSum = sum / mean ;
 
-  const answer =(console.log(averageOfSum));
+ console.log(averageOfSum);
 }
 
 averageOfNumbers(5);
@@ -32,16 +32,16 @@ averageOfNumbers(5);
 
 // 3.  Create a function that checks if a number, n is divisible by two numbers x and y. All inputs are positive, non-zero digits.
 
-function numberCheck (valueNumber) {
-  const numberX = 5;
-  const numberY = 10;
+function numberCheck (valueNumber, numberX, numberY) {
+  // const numberX = 5;
+  // const numberY = 10;
   if (valueNumber % numberX === 0 && valueNumber % numberY === 0) {
     console.log('Divisible');
   } else {
-   const divisibility = (console.log ('Not divisible'));
+   console.log ('Not divisible');
   }
 }
-numberCheck(1000);
+numberCheck(1000, 5, 10);
 
 // numberCheck(Divisible)
 
